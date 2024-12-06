@@ -1,9 +1,12 @@
 package com.example.cis183_finalproject_mm;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import java.util.ArrayList;
 
 public class DatabaseHelper extends SQLiteOpenHelper
 {
@@ -14,16 +17,16 @@ public class DatabaseHelper extends SQLiteOpenHelper
     private static final String sports_table_name = "Sports";
     private static final String types_table_name = "types";
 
-    public DatabaseHelper (Context c) {super(c,database_name,null,0);};
+    public DatabaseHelper (Context c) {super(c,database_name,null,6);};
 
     @Override
     public void onCreate(SQLiteDatabase db)
     {
-        db.execSQL(" CREATE TABLE " + users_table_name + " (username varChar(50), userId primary key autoincrement not null, password varchar(50))");
-        db.execSQL(" CREATE TABLE " + cards_table_name + " (year int, fname varchar(50), lname varchar(50), sport varchar(20), brand varchar(20), type varchar(20) ,cardNum int, cardId primary key autoincrement not null, foreign key (userId) references " + users_table_name + "(userId))");
-        db.execSQL(" CREATE TABLE " + brands_table_name + " (brandId primary key autoincrement not null, foreign key (brand) references " + cards_table_name + "(brand))");
-        db.execSQL(" CREATE TABLE " + sports_table_name + " (sportsId primary key autoincrement not null, foreign key (sport) references " + cards_table_name + "(sport))");
-        db.execSQL(" CREATE TABLE " + types_table_name + " (typeId primary key autoincrement not null, foreign key (type) references " + cards_table_name + "(type))");
+        db.execSQL(" CREATE TABLE " + users_table_name + " (username varChar(50), userId integer primary key autoincrement not null, password varchar(50))");
+        db.execSQL(" CREATE TABLE " + cards_table_name + " (cardId integer primary key autoincrement not null, year integer, fname varchar(50), lname varchar(50), sport varchar(20), brand varchar(20), type varchar(20), cardNum integer, foreign key (userId) references " + users_table_name + "(userId))");
+        db.execSQL(" CREATE TABLE " + brands_table_name + " (brandId integer primary key autoincrement not null, foreign key (brand) references " + cards_table_name + "(brand))");
+        db.execSQL(" CREATE TABLE " + sports_table_name + " (sportsId integer primary key autoincrement not null, foreign key (sport) references " + cards_table_name + "(sport))");
+        db.execSQL(" CREATE TABLE " + types_table_name + " (typeId integer primary key autoincrement not null, foreign key (type) references " + cards_table_name + "(type))");
     }
 
     @Override
@@ -134,5 +137,30 @@ public class DatabaseHelper extends SQLiteOpenHelper
         db.close();
 
         return numRows;
+    }
+
+
+    public ArrayList<User> getAllUsersInDB()
+    {
+        ArrayList<User> allUsers = new ArrayList<>();
+
+        String selectString = "SELECT username, password FROM " + users_table_name;
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery(selectString, null);
+
+        while(cursor.moveToNext())
+        {
+            String uname = cursor.getString(0);
+            String password = cursor.getString(1);
+
+            User newUser = new User(uname, password);
+            allUsers.add(newUser);
+        }
+
+        //must close database
+        db.close();
+
+        return allUsers;
     }
 }

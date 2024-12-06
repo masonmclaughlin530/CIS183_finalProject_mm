@@ -13,6 +13,21 @@
         android:theme="@style/Theme.CIS183_finalProject_mm"
         tools:targetApi="31">
         <activity
+            android:name=".CardSearch"
+            android:exported="false" />
+        <activity
+            android:name=".AddCardBrand"
+            android:exported="false" />
+        <activity
+            android:name=".AddCardTypePage"
+            android:exported="false" />
+        <activity
+            android:name=".AddSportPage"
+            android:exported="false" />
+        <activity
+            android:name=".AddCardPage"
+            android:exported="false" />
+        <activity
             android:name=".UserPage"
             android:exported="false" />
         <activity
