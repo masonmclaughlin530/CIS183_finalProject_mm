@@ -5,44 +5,86 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserPage">
+    tools:context=".UserPage"
+    android:background="#87BFFF">
 
     <Button
         android:id="@+id/btn_v_user_addCard"
         android:layout_width="165dp"
-        android:layout_height="49dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="15dp"
         android:text="Add New Card"
-        tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="667dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_v_user_searchPage"
+        android:background="#ADD7F6"/>
 
     <TextView
+        android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
         android:text="Welcome"
+        android:textColor="#3F8EFC"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="-1dp" />
+        app:layout_constraintEnd_toStartOf="@+id/changeUserName"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_v_user_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="Username"
+        android:textColor="#3B28CC"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="45dp" />
+        app:layout_constraintStart_toStartOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <ListView
-        android:layout_width="405dp"
-        android:layout_height="365dp"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="262dp" />
+        android:id="@+id/lv_v_user_listView"
+        android:layout_width="394dp"
+        android:layout_height="504dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="104dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_v_user_username" />
 
     <Button
         android:id="@+id/btn_v_user_searchPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Search Other Users"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="667dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#ADD7F6"/>
+
+    <TextView
+        android:id="@+id/tv_v_userPage_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Log Out"
+        android:textColor="#2667FF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/changeUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="2dp"
+        android:text="Change User Name"
+        android:textColor="#2667FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

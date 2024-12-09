@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CardSearch">
+    tools:context=".CardSearch"
+    android:background="#3f8efc">
 
     <Spinner
         android:id="@+id/sp_v_search_users"
@@ -26,6 +27,7 @@
         android:layout_height="wrap_content"
         android:lineSpacingExtra="24sp"
         android:text="Search"
+        android:textColor="#ADD7F6"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,6 +40,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="60dp"
         android:text="Select User"
+        android:textColor="#ADD7F6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,6 +49,7 @@
         android:layout_width="0dp"
         android:layout_height="287dp"
         android:layout_marginBottom="107dp"
+        android:background="#ADD7F6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -58,7 +62,8 @@
         android:layout_marginBottom="2dp"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#ADD7F6"/>
 
     <Button
         android:id="@+id/btn_v_search_search"
@@ -68,7 +73,8 @@
         android:layout_marginBottom="2dp"
         android:text="Search"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#ADD7F6"/>
 
     <TextView
         android:id="@+id/textView21"
@@ -77,6 +83,7 @@
         android:layout_marginStart="19dp"
         android:layout_marginBottom="22dp"
         android:text="Select Sport"
+        android:textColor="#ADD7F6"
         app:layout_constraintBottom_toTopOf="@+id/textView18"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -112,6 +119,7 @@
         android:layout_marginTop="47dp"
         android:layout_marginBottom="47dp"
         android:text="Select Brand"
+        android:textColor="#ADD7F6"
         app:layout_constraintBottom_toBottomOf="@+id/sp_v_search_Types"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/sp_v_search_sports" />
@@ -123,6 +131,7 @@
         android:layout_marginStart="17dp"
         android:layout_marginTop="30dp"
         android:text="Select Type"
+        android:textColor="#ADD7F6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
@@ -146,6 +155,7 @@
         android:ems="10"
         android:hint="First Name"
         android:inputType="text"
+        android:textColor="#ADD7F6"
         app:layout_constraintBaseline_toBaselineOf="@+id/et_v_search_lname"
         app:layout_constraintEnd_toStartOf="@+id/et_v_search_lname"
         app:layout_constraintStart_toStartOf="parent" />
@@ -159,6 +169,8 @@
         android:ems="10"
         android:hint="Last Name"
         android:inputType="text"
+        android:textColor="#ADD7F6"
         app:layout_constraintBottom_toTopOf="@+id/lv_v_search_sortedList"
         app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

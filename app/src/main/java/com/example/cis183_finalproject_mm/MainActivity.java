@@ -76,6 +76,8 @@ public class MainActivity extends AppCompatActivity
                     if(validUsernameAndPassword(username.getText().toString(), password.getText().toString()))
                     {
                         errorMsg.setVisibility(View.INVISIBLE);
+                        User loggedInUser = db.getUser(username.getText().toString());
+                        SessionData.setLoggedInUser(loggedInUser);
                         startActivity(intent_j_welcome);
                     }
                     else

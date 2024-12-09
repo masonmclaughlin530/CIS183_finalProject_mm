@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+
+    >
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="247dp"
+        android:layout_height="32dp"
+        android:hint="Search"
+        android:text="Select Card"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:ems="10"
+        android:hint="Search Player Name"
+        android:inputType="text" />
+
+    <ListView
+        android:id="@+id/lv_cards"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

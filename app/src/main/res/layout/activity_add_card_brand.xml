@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddCardBrand">
+    tools:context=".AddCardBrand"
+    android:background="#87BFFF">
 
     <TextView
         android:id="@+id/textView14"
@@ -14,6 +15,7 @@
         android:layout_marginTop="2dp"
         android:lineSpacingExtra="24sp"
         android:text="Add Card Type"
+        android:textColor="#ADD7F6"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,12 +34,13 @@
 
     <EditText
         android:id="@+id/et_v_addBrand_cardType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="220dp"
+        android:layout_height="104dp"
         android:layout_marginTop="115dp"
         android:ems="10"
         android:hint="Add Brand"
         android:inputType="text"
+        android:textColor="#ADD7F6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -50,7 +53,8 @@
         android:layout_marginBottom="23dp"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#ADD7F6"/>
 
     <Button
         android:id="@+id/btn_v_addBrand_addBrand"
@@ -59,6 +63,10 @@
         android:layout_marginEnd="23dp"
         android:layout_marginBottom="24dp"
         android:text="Add"
+        app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="#87BFFF"
+        android:background="#ADD7F6"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

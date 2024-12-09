@@ -5,17 +5,20 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddSportPage">
+    tools:context=".AddSportPage"
+    android:background="#87bfff">
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Sport"
+        android:textColor="#2667FF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#ADD7F6"/>
 
     <EditText
         android:id="@+id/et_j_addSport_addSport"
@@ -25,6 +28,7 @@
         android:ems="10"
         android:hint="Add Sport"
         android:inputType="text"
+        android:textColor="#ADD7F6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -48,7 +52,8 @@
         android:layout_marginBottom="20dp"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#ADD7F6"/>
 
     <Button
         android:id="@+id/btn_v_addSport_addSport"
@@ -58,5 +63,6 @@
         android:layout_marginBottom="24dp"
         android:text="Add"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#ADD7F6"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
