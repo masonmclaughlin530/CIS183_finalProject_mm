@@ -435,17 +435,17 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
         if(!brand.equals("No Brands Selected"))
         {
-            selectStatement += " AND brand = " + brand;
+            selectStatement += " AND brand LIKE '&" + brand + "%'";
         }
 
         if(!sport.equals("No Sports Selected"))
         {
-            selectStatement += " AND sport = " + sport;
+            selectStatement += " AND sport LIKE '&" + sport + "%'";
         }
 
         if(!type.equals("No Types Selected"))
         {
-            selectStatement += " AND type = " + type;
+            selectStatement += " AND type LIKE '&" + type + "%'";
         }
 
         SQLiteDatabase db = this.getReadableDatabase();

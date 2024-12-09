@@ -49,6 +49,8 @@ public class UsernameChange extends AppCompatActivity {
         errorMsg = findViewById(R.id.tv_v_userChange_errorMsg);
         deleteAcc = findViewById(R.id.deleteUser);
 
+        errorMsg.setVisibility(View.INVISIBLE);
+
         userPage = new Intent(UsernameChange.this, UserPage.class);
         main = new Intent(UsernameChange.this, MainActivity.class);
 
